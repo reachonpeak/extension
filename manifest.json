@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Amazon Relay 2.0",
+  "version": "1.0",
+  "description": "Automated load booking assistant for Amazon Relay with filters and randomizer.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://relay.amazon.com/*",
+    "https://relay.amazon.co.uk/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://relay.amazon.com/*", "https://relay.amazon.co.uk/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
