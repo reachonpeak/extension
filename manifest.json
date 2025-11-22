@@ -29,7 +29,13 @@
     {
       "matches": ["https://relay.amazon.com/*", "https://relay.amazon.co.uk/*"],
       "js": ["content.js"],
-      "run_at": "document_end"
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["sounds/alert.mp3"],
+      "matches": ["https://relay.amazon.com/*"]
     }
   ]
 }
